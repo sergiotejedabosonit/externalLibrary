@@ -1,5 +1,5 @@
 <div class="row mt-5">
-    <h5>Comparador de Criptos:</h5>
+    <h5>Comparador de Criptos: </h5>
     <hr>
         <div class="input-group">
             <form [formGroup]="miFormulario" (ngSubmit)="buscar(miFormulario.value.criptoOne,miFormulario.value.criptoTwo, miFormulario.value.criptoThree)" class="w-100">
@@ -29,7 +29,7 @@
                 </select>
                 </div>
                 <div class="input-group-append w-100 mt-1">
-                    <button class="btn btn-success float-end p-3" type="submit">Buscar</button>
+                    <button class="btn btn-success float-end p-3" type="submit">Comparar</button>
                 </div>
             </div>
             </form>
@@ -67,7 +67,7 @@
                 </div>
             </ng-container>
             <ng-template #elseTemplates>
-               <div class="alert alert-success col">
+               <div class="alert alert-success">
                     Cargando...
                 </div>
             </ng-template>

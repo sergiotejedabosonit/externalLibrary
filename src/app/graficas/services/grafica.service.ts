@@ -62,7 +62,7 @@ export class GraficaService {
     .pipe(
       map(resp => {
         const allData = Object.values(resp)[0]
-        console.log(allData);
+        
         allData.forEach((element: any) => {
           this.allCriptosName.push(element.id)
         });

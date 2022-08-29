@@ -97,7 +97,7 @@ export class ComparadorComponent implements OnInit {
     labels: this.polarAreaChartLabels,
     datasets: [ {
       data: [  ],
-      label: ' '
+      label: 'crecimiento' 
     } ]
   };
   public polarAreaLegend = true;
@@ -144,7 +144,7 @@ export class ComparadorComponent implements OnInit {
     console.log(firstCripto, secondCripto, thirdCripto)
     this.gs.getCriptoByName(firstCripto).subscribe(
       ({first, name, second, three}) => {
-        console.log( this.radarChartData.datasets[0]);
+        
           this.radarChartData.datasets[0].data.push(...first)
           this.radarChartData.datasets[0].label = name
           this.barChartData.datasets[0].data.push(...second)
@@ -154,7 +154,7 @@ export class ComparadorComponent implements OnInit {
       })
     this.gs.getCriptoByName(secondCripto).subscribe(
       ({first, name, second, three}) =>  {
-        console.log(this.radarChartData.datasets[1])
+        
         this.radarChartData.datasets[1].data.push(...first)
         this.radarChartData.datasets[1].label = name
         this.barChartData.datasets[1].data.push(...second)
@@ -172,7 +172,7 @@ export class ComparadorComponent implements OnInit {
       this.polarAreaChartData.datasets[0].data.push(three)
       this.polarAreaChartLabels.push(name)
     })
-    console.log( this.radarChartData.datasets.length)
+    
   }
 
 }
